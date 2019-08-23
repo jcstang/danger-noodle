@@ -50,6 +50,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         myTable.delegate = self
         myTable.dataSource = self
         myTable.register(UINib(nibName: "PetTableViewCell", bundle: nil), forCellReuseIdentifier: "daNib")
+        
+        print("********* testing *************")
+        var myNewPet = Pet.init()
+        print("here is the age of my new pet: \(myNewPet.age)")
        
         //configureTableView()
     }
