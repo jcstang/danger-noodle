@@ -52,8 +52,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         myTable.register(UINib(nibName: "PetTableViewCell", bundle: nil), forCellReuseIdentifier: "daNib")
         
         print("********* testing *************")
-        var myNewPet = Pet.init()
+        var myNewPet = Pet.init(name: "River")
         print("here is the age of my new pet: \(myNewPet.age)")
+        
+        
+        var myNewSnake = Snake.init(chosenName: "Drax", breedType: .WesternHognose)
+        print("blah")
        
         //configureTableView()
     }
