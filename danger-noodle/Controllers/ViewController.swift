@@ -19,27 +19,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var myPets = ["pet1", "pet2", "pet3", "pet4"]
     var listOfPets: [Snake] = [Snake.init(chosenName: "Drax", breedType: .WesternHognose), Snake.init(chosenName: "Gimli", breedType: .BallPython), Snake.init(chosenName: "Jar Jar Binks", breedType: .KenyanSandBoa)]
     var selectedPet = ""
+    var mySelectedSnake: Snake = Snake.init()
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myPets.count
+        return listOfPets.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = myTable.dequeueReusableCell(withIdentifier: "daNib", for: indexPath) as! PetTableViewCell
-        cell.petNameTxt.text = myPets[indexPath.row]
+        cell.petNameTxt.text = listOfPets[indexPath.row].name
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("row \(myPets[indexPath.row])")
-        selectedPet = myPets[indexPath.row]
+        mySelectedSnake = listOfPets[indexPath.row]
         performSegue(withIdentifier: segueID, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueID {
             let detailVC = segue.destination as! DetailViewController
-            detailVC.detailViewControllerTitle = selectedPet
+            detailVC.selectedSnake = mySelectedSnake
             detailVC.delegate = self
         }
     }
@@ -51,6 +53,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         myTable.delegate = self
         myTable.dataSource = self
         myTable.register(UINib(nibName: "PetTableViewCell", bundle: nil), forCellReuseIdentifier: "daNib")
+        self.title = "Danger Noodle"
        
         //configureTableView()
     }

@@ -16,12 +16,16 @@ class DetailViewController: UIViewController {
     
     var delegate: CanRecieveDataDelegate?
     var detailViewControllerTitle = " "
+    //var selectedSnake: Snake = Snake.init(breedType: .BallPython)
+    //var selectedSnake: Snake = Snake.init(chosenName: "Blah", breedType: .BallPython)
+    var selectedSnake: Snake = Snake.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.title = detailViewControllerTitle
+        //self.title = detailViewControllerTitle
+        self.title = selectedSnake.name
     }
     
     
