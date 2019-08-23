@@ -26,24 +26,18 @@ class Pet {
     
     
     //MARK: Initilizers are all here
-    init() {
-        name = "Bingo"
+    init(name: String) {
+        self.name = name
         birthdate = Date.init()
     }
     
-    convenience init(petName: String, bday: Date) {
-        self.init()
-        name = petName
+    convenience init(chosenName: String, bday: Date) {
+        self.init(name: chosenName)
         birthdate = bday
     }
     
-    convenience init(bday: Date) {
-        self.init()
-        birthdate = bday
-    }
-    
-    convenience init(year: Int, month: Int, day: Int, timeZoneAbbreviation: String) {
-        self.init()
+    convenience init(chosenName: String, year: Int, month: Int, day: Int, timeZoneAbbreviation: String) {
+        self.init(name: chosenName)
         
         // Specify date components
         var bdayComponents = DateComponents()
