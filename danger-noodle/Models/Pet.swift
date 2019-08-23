@@ -26,6 +26,11 @@ class Pet {
     
     
     //MARK: Initilizers are all here
+    init() {
+        self.name = "Bob"
+        self.birthdate = Date.init()
+    }
+    
     init(name: String) {
         self.name = name
         birthdate = Date.init()

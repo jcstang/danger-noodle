@@ -19,20 +19,27 @@ class Snake: Pet {
     
     var breed: Breed
     
+    override init() {
+        self.breed = .BallPython
+        super.init(name: "Bobby")
+    }
+    
     init(chosenName: String, breedType: Breed) {
         self.breed = breedType
         super.init(name: chosenName)
     }
     
-//    override init() {
+//    init(breedType: Breed) {
+//        self.breed = breedType
 //        super.init()
-//        breed = .BallPython
 //    }
-//
-//    convenience init(type: Breed) {
-//        self.init()
-//        breed = type
+    
+//    init(chosenName: String, breedType: Breed) {
+//        self.breed = breedType
+//        super.init(name: chosenName)
 //    }
+    
+
     
     
 }
