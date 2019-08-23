@@ -4,6 +4,8 @@
 //
 //  Created by Jake Stanger on 8/23/19.
 //  Copyright © 2019 Jake Stanger. All rights reserved.
+//  "Read-only computed property" are used in this file
+//  find documentation on this topic at docs.swift.org/swift-book/LanguageGuide/Properties.html
 //
 
 import Foundation
@@ -13,18 +15,12 @@ class Pet {
     //Declare your model variables here
     var name: String
     var birthdate: Date
+    // read-only computed property
     var age: Int {
 
         let now = Date()
         let ageComponents = Calendar.current.dateComponents([.year], from: self.birthdate, to: now)
 
-        //TODO: check for errors
-        print(self.birthdate)
-        print(ageComponents.year!)
-        
-       
-        
-        
         return ageComponents.year!
     }
     
