@@ -21,6 +21,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var selectedPet = ""
     var mySelectedSnake: Snake = Snake.init()
     
+    @IBAction func newPetBtnPressed(_ sender: Any) {
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listOfPets.count
