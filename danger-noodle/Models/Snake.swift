@@ -8,6 +8,47 @@
 
 import Foundation
 
-class Snake: Pet {
-    //some code
+enum Breed {
+    case WesternHognose
+    case BallPython
+    case KenyanSandBoa
+    case RedTailBoa
 }
+
+class Snake: Pet {
+    
+    var breed: Breed
+    
+    init(chosenName: String, breedType: Breed) {
+        self.breed = breedType
+        super.init(name: chosenName)
+    }
+    
+//    override init() {
+//        super.init()
+//        breed = .BallPython
+//    }
+//
+//    convenience init(type: Breed) {
+//        self.init()
+//        breed = type
+//    }
+    
+    
+}
+
+
+/*
+ class Goblin: NonPlayerCharacter {
+ var weapon : Int = 0
+ 
+ convenience init(health: Int, power: Int, weapon: Int) {
+ self.init(health: health, power: power)
+ self.weapon = weapon
+ }
+ 
+ override func attack() -> String {
+ return "attack from Goblin"
+ }
+ }
+ */
