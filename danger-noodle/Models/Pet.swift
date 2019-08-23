@@ -6,7 +6,6 @@
 //  Copyright © 2019 Jake Stanger. All rights reserved.
 //  "Read-only computed property" are used in this file
 //  find documentation on this topic at docs.swift.org/swift-book/LanguageGuide/Properties.html
-
 //
 
 import Foundation
