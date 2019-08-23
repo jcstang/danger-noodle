@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var myTable: UITableView!
     var myPets = ["pet1", "pet2", "pet3", "pet4"]
+    var listOfPets: [Snake] = [Snake.init(chosenName: "Drax", breedType: .WesternHognose), Snake.init(chosenName: "Gimli", breedType: .BallPython), Snake.init(chosenName: "Jar Jar Binks", breedType: .KenyanSandBoa)]
     var selectedPet = ""
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,14 +51,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         myTable.delegate = self
         myTable.dataSource = self
         myTable.register(UINib(nibName: "PetTableViewCell", bundle: nil), forCellReuseIdentifier: "daNib")
-        
-        print("********* testing *************")
-        var myNewPet = Pet.init(name: "River")
-        print("here is the age of my new pet: \(myNewPet.age)")
-        
-        
-        var myNewSnake = Snake.init(chosenName: "Drax", breedType: .WesternHognose)
-        print("blah")
        
         //configureTableView()
     }
