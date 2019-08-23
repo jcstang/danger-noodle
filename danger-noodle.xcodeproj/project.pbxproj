@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		8E5C526F231038CE00CAE47E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5C526E231038CE00CAE47E /* AppDelegate.swift */; };
 		8E5C5271231038CE00CAE47E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5C5270231038CE00CAE47E /* ViewController.swift */; };
-		8E5C5274231038CE00CAE47E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5C5272231038CE00CAE47E /* Main.storyboard */; };
 		8E5C5277231038CE00CAE47E /* danger_noodle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E5C5275231038CE00CAE47E /* danger_noodle.xcdatamodeld */; };
 		8E5C5279231038CF00CAE47E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E5C5278231038CF00CAE47E /* Assets.xcassets */; };
 		8E5C527C231038CF00CAE47E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5C527A231038CF00CAE47E /* LaunchScreen.storyboard */; };
+		8E5C528623103FF800CAE47E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5C528523103FF800CAE47E /* Main.storyboard */; };
+		8E5C5288231040E200CAE47E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5C5287231040E200CAE47E /* DetailViewController.swift */; };
+		8E5C528C231044EB00CAE47E /* PetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5C528A231044EB00CAE47E /* PetTableViewCell.swift */; };
+		8E5C528D231044EB00CAE47E /* PetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E5C528B231044EB00CAE47E /* PetTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8E5C526B231038CE00CAE47E /* danger-noodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "danger-noodle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E5C526E231038CE00CAE47E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E5C5270231038CE00CAE47E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8E5C5273231038CE00CAE47E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E5C5276231038CE00CAE47E /* danger_noodle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = danger_noodle.xcdatamodel; sourceTree = "<group>"; };
 		8E5C5278231038CF00CAE47E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E5C527B231038CF00CAE47E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E5C527D231038CF00CAE47E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E5C528523103FF800CAE47E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		8E5C5287231040E200CAE47E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8E5C528A231044EB00CAE47E /* PetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetTableViewCell.swift; sourceTree = "<group>"; };
+		8E5C528B231044EB00CAE47E /* PetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,26 @@
 		8E5C526D231038CE00CAE47E /* danger-noodle */ = {
 			isa = PBXGroup;
 			children = (
+				8E5C5289231044CF00CAE47E /* table-cell */,
 				8E5C526E231038CE00CAE47E /* AppDelegate.swift */,
 				8E5C5270231038CE00CAE47E /* ViewController.swift */,
-				8E5C5272231038CE00CAE47E /* Main.storyboard */,
+				8E5C5287231040E200CAE47E /* DetailViewController.swift */,
+				8E5C528523103FF800CAE47E /* Main.storyboard */,
 				8E5C5278231038CF00CAE47E /* Assets.xcassets */,
 				8E5C527A231038CF00CAE47E /* LaunchScreen.storyboard */,
 				8E5C527D231038CF00CAE47E /* Info.plist */,
 				8E5C5275231038CE00CAE47E /* danger_noodle.xcdatamodeld */,
 			);
 			path = "danger-noodle";
+			sourceTree = "<group>";
+		};
+		8E5C5289231044CF00CAE47E /* table-cell */ = {
+			isa = PBXGroup;
+			children = (
+				8E5C528A231044EB00CAE47E /* PetTableViewCell.swift */,
+				8E5C528B231044EB00CAE47E /* PetTableViewCell.xib */,
+			);
+			path = "table-cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +143,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E5C527C231038CF00CAE47E /* LaunchScreen.storyboard in Resources */,
+				8E5C528D231044EB00CAE47E /* PetTableViewCell.xib in Resources */,
 				8E5C5279231038CF00CAE47E /* Assets.xcassets in Resources */,
-				8E5C5274231038CE00CAE47E /* Main.storyboard in Resources */,
+				8E5C528623103FF800CAE47E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,20 +159,14 @@
 				8E5C5271231038CE00CAE47E /* ViewController.swift in Sources */,
 				8E5C5277231038CE00CAE47E /* danger_noodle.xcdatamodeld in Sources */,
 				8E5C526F231038CE00CAE47E /* AppDelegate.swift in Sources */,
+				8E5C528C231044EB00CAE47E /* PetTableViewCell.swift in Sources */,
+				8E5C5288231040E200CAE47E /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8E5C5272231038CE00CAE47E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E5C5273231038CE00CAE47E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8E5C527A231038CF00CAE47E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
